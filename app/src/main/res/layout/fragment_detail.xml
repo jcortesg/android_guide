@@ -1,0 +1,15 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".DetailActivity$DetailFragment">
+
+
+<TextView
+    android:id="@+id/detail_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="HEllO"/>
+
+</RelativeLayout>
