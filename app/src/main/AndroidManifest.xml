@@ -27,13 +27,17 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:parentActivityName=".MainActivity"
-            >
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jhon.android_curse.MainActivity" />
         </activity>
 
-</application>
+        <provider
+            android:name=".WeatherProvider"
+            android:authorities="com.example.android.sunshine.app"
+            android:enabled="true"
+            android:exported="true"></provider>
+    </application>
 
-    </manifest>
+</manifest>
