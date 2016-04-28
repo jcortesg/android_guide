@@ -15,7 +15,7 @@ import android.text.format.Time;
  */
 public class WeatherContract {
     // content authority is the package name for the app, which is guaranteed to be unique
-    public static final String CONTENT_AUTHORITY = "com.example.android.sunshine.app";
+    public static final String CONTENT_AUTHORITY = "com.example.jhon.android_curse";
     // Use CONTENT_AUTHORITY to create the base of all URI's
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
     // Possible paths (appended to base content URI for possible URI's)
@@ -54,7 +54,7 @@ public class WeatherContract {
 
     public static final class WeatherEntry implements BaseColumns {
         public static final Uri CONTENT_URI =
-                BASE_CONTENT_URI.buildUpon().appendPath(PATH_LOCATION).build();
+                BASE_CONTENT_URI.buildUpon().appendPath(PATH_WEATHER).build();
         public static final String CONTENT_TYPE =
                 ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_LOCATION;
         public static final String CONTENT_ITEM_TYPE =
