@@ -1,4 +1,4 @@
-package com.example.jhon.android_curse.data;
+package com.example.jhon.android_curse;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.test.AndroidTestCase;
+
+import com.example.jhon.android_curse.data.WeatherContract;
+import com.example.jhon.android_curse.data.WeatherDbHelper;
 
 import java.util.Map;
 import java.util.Set;
