@@ -35,9 +35,8 @@
 
         <provider
             android:name=".WeatherProvider"
-            android:authorities="com.example.android.sunshine.app"
-            android:enabled="true"
-            android:exported="true"></provider>
+            android:authorities="com.example.jhon.android_curse"
+        ></provider>
     </application>
 
 </manifest>
