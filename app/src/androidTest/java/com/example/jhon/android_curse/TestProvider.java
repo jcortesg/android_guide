@@ -84,7 +84,7 @@ public class TestProvider extends AndroidTestCase {
 
     static private final int BULK_INSERT_RECORDS_TO_INSERT = 10;
     static ContentValues[] createBulkInsertWeatherValues(long locationRowId) {
-        long currentTestDate = TestUtilities.TEST_DATE;
+        long currentTestDate = 1419033600L;  // December 20th, 2014;
         long millisecondsInADay = 1000*60*60*24;
         ContentValues[] returnContentValues = new ContentValues[BULK_INSERT_RECORDS_TO_INSERT];
 
@@ -108,22 +108,15 @@ public class TestProvider extends AndroidTestCase {
     public void testProviderRegistry() {
         PackageManager pm = mContext.getPackageManager();
 
-        // We define the component name based on the package name from the context and the
-        // WeatherProvider class.
         ComponentName componentName = new ComponentName(mContext.getPackageName(),
                 WeatherProvider.class.getName());
         try {
-            // Fetch the provider info using the component name from the PackageManager
-            // This throws an exception if the provider isn't registered.
-            ProviderInfo providerInfo = pm.getProviderInfo(componentName, 0);
 
-            // Make sure that the registered authority matches the authority from the Contract.
+            ProviderInfo providerInfo = pm.getProviderInfo(componentName, 0);
             assertEquals("Error: WeatherProvider registered with authority: " + providerInfo.authority +
                             " instead of authority: " + WeatherContract.CONTENT_AUTHORITY,
                     providerInfo.authority, WeatherContract.CONTENT_AUTHORITY);
-
         } catch (PackageManager.NameNotFoundException e) {
-            // I guess the provider isn't registered correctly.
             assertTrue("Error: WeatherProvider not registered at " + mContext.getPackageName(),
                     false);
         }
