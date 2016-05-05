@@ -15,5 +15,10 @@
         android:id="@+id/action_map"
         android:title="@string/action_map"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/reg"
+        android:title="Registro GMC"
+        app:showAsAction="never" />
+
 
 </menu>
